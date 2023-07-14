@@ -1,5 +1,5 @@
 {
-    "name": "wakazunn/dcat-admin-system-config",
+    "name": "wakazunn/dcat-waka-system-config",
     "alias": "",
     "description": "仿CRMEB开源版的system config配置的Laravel实现",
     "type": "library",
