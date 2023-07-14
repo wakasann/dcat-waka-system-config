@@ -35,7 +35,7 @@ class DASystemConfigServiceProvider extends ServiceProvider
 
 	public function register()
 	{
-		$this->register_routes();
+		
 	}
     
      public function register_routes(){
@@ -46,16 +46,17 @@ class DASystemConfigServiceProvider extends ServiceProvider
 
         app('router')->group($attributes, function ($router) {
             /* @var \Illuminate\Routing\Router $router */
-			$router->resource('wakazunn/config/tabs', 'Wakazunn\DASystemConfig\Http\Controllers\PayConfigTabController');
-			$router->resource('wakazunn/config/configs', 'Wakazunn\DASystemConfig\Http\Controllers\PayConfigController');
-			$router->get('wakazunn/config/list', 'Wakazunn\DASystemConfig\Http\Controllers\PayConfigController@configs')->name('waka-syste-config-list');
-			$router->post('wakazunn/config/save_basics', 'Wakazunn\DASystemConfig\Http\Controllers\PayConfigController@save_basics')->name('waka-syste-config-list-save');
+			$router->resource('wakazunn/config/tabs', 'Wakazunn\DASystemConfig\Http\Controllers\ConfigTabController');
+			$router->resource('wakazunn/config/configs', 'Wakazunn\DASystemConfig\Http\Controllers\ConfigController');
+			$router->get('wakazunn/config/list', 'Wakazunn\DASystemConfig\Http\Controllers\ConfigController@configs')->name('waka-syste-config-list');
+			$router->post('wakazunn/config/save_basics', 'Wakazunn\DASystemConfig\Http\Controllers\ConfigController@save_basics')->name('waka-syste-config-list-save');
         });
     }
     
 	public function init()
 	{
 		parent::init();
+		$this->register_routes();
 		
 	}
 
