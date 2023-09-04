@@ -4,7 +4,7 @@ namespace Wakazunn\DASystemConfig\Models;
 
 use \Illuminate\Database\Eloquent\Model;
 use Dcat\Admin\Traits\HasDateTimeFormatter;
-use Illuminate\Database\Eloquent\Casts\AsArrayObject;
+// use Illuminate\Database\Eloquent\Casts\AsArrayObject;
 
 use Dcat\Admin\Traits\ModelTree;
 
@@ -23,7 +23,7 @@ class Config extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'value' => AsArrayObject::class,
+        // 'value' => AsArrayObject::class,
     ];
 
 
