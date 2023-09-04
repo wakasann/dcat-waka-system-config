@@ -552,7 +552,7 @@ class ConfigController extends AdminController
             $exist = $ConfigRes->model()->where('menu_name',$k)->count();
             if($exist){
                 $ConfigRes->model()->where('menu_name',$k)->update([
-                    'value' => $v
+                    'value' => json_encode($v)
                 ]);
                 WakaSystemConfig::saveConfig($k,$v);
             }
