@@ -1,8 +1,8 @@
 <?php 
 return [
     'labels' => [
-        'PayConfigTab' => '配置分类',
-        'pay-config-tab' => '配置分类',
+        'configTab' => '配置分类',
+        'config-tab' => '配置分类',
     ],
     'fields' => [
         'parent_id' => '上级分类',

@@ -34,7 +34,7 @@ class ConfigTabController extends AdminController
     public function index(Content $content)
     {
         return $content
-            ->title(DASystemConfigServiceProvider::trans('config-tab.labels.PayConfigTab'))
+            ->title(DASystemConfigServiceProvider::trans('config-tab.labels.configTab'))
             ->description(DASystemConfigServiceProvider::trans('config-tab.list'))
             ->body(function (Row $row) {
                 $row->column(7, $this->treeView()->render());

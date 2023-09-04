@@ -18,7 +18,7 @@ class Config extends EloquentRepository
 
 
     public function getConfigChildrenTabAll($pid = 0){
-        $configAll = (new PayConfigTab())->getChildrenTab($pid);
+        $configAll = (new ConfigTab())->getChildrenTab($pid);
         $config_tab = [];
         foreach ($configAll as $k => $v) {
             if (!$v['info']) {
