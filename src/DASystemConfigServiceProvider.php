@@ -29,7 +29,7 @@ class DASystemConfigServiceProvider extends ServiceProvider
 		[
 			'parent' => 'System Config', // 指定父级菜单
 			'title'  => 'Config',
-			'uri'    => 'wakazunn/config/configs',
+			'uri'    => 'wakazunn/config/list',
 		],
     ];
 
